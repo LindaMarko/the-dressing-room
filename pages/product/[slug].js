@@ -50,16 +50,16 @@ export default function ProductScreen() {
               <h1 className="text-lg font-semibold">{product.name}</h1>
             </li>
             <li>
-              <em>Category</em>: {product.category}
+              <em>Category:</em> {product.category}
             </li>
             <li>
-              <em>Brand</em>: {product.brand}
+              <em>Brand:</em> {product.brand}
             </li>
             <li>
               {product.rating} of {product.numReviews} reviews
             </li>
             <li className="mt-4">
-              <em>Description</em>: {product.description}
+              <em>Description:</em> {product.description}
             </li>
           </ul>
         </div>
