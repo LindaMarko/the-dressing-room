@@ -45,7 +45,7 @@ export default function Layout({ title, children }) {
         <main className="container max-w-7xl m-auto mt-12 mb-18 px-8">
           {children}
         </main>
-        <footer className="flex h-10 justify-center items-center shadow-inner mt-40">
+        <footer className="flex h-10 justify-center items-center shadow-inner mt-40 text-xs">
           <p>Copyright © 2023 The Dressing Room</p>
         </footer>
       </div>
