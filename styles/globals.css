@@ -39,3 +39,7 @@ textarea {
 .dropdown-link {
   @apply flex p-2 hover:bg-gray-100;
 }
+
+.checkout-card {
+  margin-bottom: 0;
+}
