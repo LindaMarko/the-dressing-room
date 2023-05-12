@@ -47,6 +47,7 @@ export default function PlaceOrderScreen() {
         totalPrice,
       });
       setLoading(false);
+
       dispatch({ type: 'CART_CLEAR_ITEMS' });
       Cookies.set(
         'cart',
