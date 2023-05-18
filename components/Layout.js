@@ -39,11 +39,11 @@ export default function Layout({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between font-poppins">
         <header>
           <nav className="flex h-12 items-center px-4 md:px-10 justify-between shadow-md">
-            <Link href="/" className="text-lg md:text-2xl font-bold">
+            <Link href="/" className="text-lg md:text-3xl font-bold">
               the dressing room
             </Link>
             <div>
-              <Link href="/cart" className="p-4 text-sm md:text-base">
+              <Link href="/cart" className="p-4 text-sm md:text-lg">
                 Cart
                 {cartItemsCount > 0 && (
                   <span className="ml-1 rounded-full bg-emerald-500 px-2 py-1 text-xs font-bold text-white">
@@ -56,10 +56,10 @@ export default function Layout({ title, children }) {
                 'Loading'
               ) : session?.user ? (
                 <Menu as="div" className="relative inline-block">
-                  <Menu.Button className="text-emerald-400 text-sm md:text-base">
+                  <Menu.Button className="text-emerald-400 text-sm md:text-lg">
                     {session.user.name}
                   </Menu.Button>
-                  <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg text-sm md:text-base">
+                  <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg text-sm md:text-lg">
                     <Menu.Item>
                       <DropdownLink className="dropdown-link" href="/profile">
                         Profile
@@ -85,7 +85,7 @@ export default function Layout({ title, children }) {
                   </Menu.Items>
                 </Menu>
               ) : (
-                <Link href="/login" className="p-2 text-sm md:text-base">
+                <Link href="/login" className="p-2 text-sm md:text-lg">
                   Login
                 </Link>
               )}
