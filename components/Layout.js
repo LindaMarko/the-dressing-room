@@ -30,7 +30,7 @@ export default function Layout({ title, children }) {
     <>
       <Head>
         <title>
-          {title ? title + ' - The Dressing Room' : 'The Dressing Room'}
+          {title ? title + ' - the dressing room' : 'the dressing room'}
         </title>
         <meta name="description" content="Ecommerce Website" />
         <link rel="icon" href="/favicon.ico" />
@@ -38,12 +38,12 @@ export default function Layout({ title, children }) {
       <ToastContainer position="top-center" limit={1} />
       <div className="flex min-h-screen flex-col justify-between font-poppins">
         <header>
-          <nav className="flex h-12 items-center px-6 justify-between shadow-md">
-            <Link href="/" className="text-lg font-bold">
+          <nav className="flex h-12 items-center px-4 md:px-10 justify-between shadow-md">
+            <Link href="/" className="text-lg md:text-2xl font-bold">
               the dressing room
             </Link>
             <div>
-              <Link href="/cart" className="p-4">
+              <Link href="/cart" className="p-4 text-sm md:text-base">
                 Cart
                 {cartItemsCount > 0 && (
                   <span className="ml-1 rounded-full bg-emerald-500 px-2 py-1 text-xs font-bold text-white">
@@ -56,10 +56,10 @@ export default function Layout({ title, children }) {
                 'Loading'
               ) : session?.user ? (
                 <Menu as="div" className="relative inline-block">
-                  <Menu.Button className="text-emerald-400">
+                  <Menu.Button className="text-emerald-400 text-sm md:text-base">
                     {session.user.name}
                   </Menu.Button>
-                  <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg ">
+                  <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg text-sm md:text-base">
                     <Menu.Item>
                       <DropdownLink className="dropdown-link" href="/profile">
                         Profile
@@ -85,7 +85,7 @@ export default function Layout({ title, children }) {
                   </Menu.Items>
                 </Menu>
               ) : (
-                <Link href="/login" className="p-2">
+                <Link href="/login" className="p-2 text-sm md:text-base">
                   Login
                 </Link>
               )}
@@ -96,7 +96,7 @@ export default function Layout({ title, children }) {
           {children}
         </main>
         <footer className="flex h-10 justify-center items-center shadow-inner mt-40 text-xs">
-          <p>Copyright © 2023 The Dressing Room</p>
+          <p>copyright © 2023 the dressing room</p>
         </footer>
       </div>
     </>
