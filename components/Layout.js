@@ -8,6 +8,7 @@ import { Menu } from '@headlessui/react';
 import 'react-toastify/dist/ReactToastify.css';
 import { Store } from '@/utils/Store';
 import DropdownLink from './DropdownLink';
+import { SearchIcon } from '@heroicons/react/outline';
 
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
@@ -38,10 +39,24 @@ export default function Layout({ title, children }) {
       <ToastContainer position="top-center" limit={1} />
       <div className="flex min-h-screen flex-col justify-between font-poppins">
         <header>
-          <nav className="flex h-12 items-center px-4 md:px-10 justify-between shadow-md">
-            <Link href="/" className="text-lg md:text-3xl font-bold">
+          <nav className="flex h-12 items-center px-4 md:px-10 md:py-8 justify-between shadow-md">
+            <Link href="/" className="text-lg md:text-2xl font-bold">
               the dressing room
             </Link>
+            <form className="mx-auto hidden justify-center md:flex">
+              <input
+                type="text"
+                className="rounded-tr-none rounded-br-none p-1 text-sm   focus:ring-0"
+                placeholder="Search products"
+              />
+              <button
+                className="rounded rounded-tl-none rounded-bl-none bg-emerald-300 p-1 text-sm dark:text-black"
+                type="submit"
+                id="button-addon2"
+              >
+                <SearchIcon className="h-5 w-5"></SearchIcon>
+              </button>
+            </form>
             <div>
               <Link href="/cart" className="p-4 text-sm md:text-lg">
                 Cart
@@ -55,7 +70,7 @@ export default function Layout({ title, children }) {
               {status === 'loading' ? (
                 'Loading'
               ) : session?.user ? (
-                <Menu as="div" className="relative inline-block">
+                <Menu as="div" className="relative inline-block z-40">
                   <Menu.Button className="text-emerald-400 text-sm md:text-lg">
                     {session.user.name}
                   </Menu.Button>
