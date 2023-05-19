@@ -38,8 +38,10 @@ export default function Home({ products, homePageBanners }) {
           </div>
         ))}
       </Carousel>
-      <h2 className="h2 text-sm md:text-xl mt-12 mb-5">Latest Products</h2>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
+      <h2 className="h2 text-sm md:text-2xl font-semibold mt-12 mb-5">
+        Latest Products
+      </h2>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <ProductItem
             product={product}
