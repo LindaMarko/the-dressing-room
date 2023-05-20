@@ -33,34 +33,36 @@ export default function ProductScreen(props) {
 
   return (
     <Layout title={product.name}>
-      <div className="py-4">
+      <div className="py-4 px-4">
         <Link href="/"> &#8592; Back to products</Link>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-4">
-        <div className="md:col-span-1">
+      <div className="grid md:grid-cols-3 gap-8 md:gap-4 px-4">
+        <div className="md:col-span-1 mx-auto">
           <Image
             src={product.image}
             alt={product.name}
             width={340}
             height={340}
+            priority={true}
           ></Image>
         </div>
         <div>
           <ul>
             <li>
-              <h1 className="text-lg font-semibold">{product.name}</h1>
+              <h1 className="text-lg font-semibold mb-2">{product.name}</h1>
             </li>
             <li>
-              <em>Category:</em> {product.category}
+              <em className="font-semibold">Category:</em> {product.category}
             </li>
             <li>
-              <em>Brand:</em> {product.brand}
+              <em className="font-semibold">Brand:</em> {product.brand}
             </li>
             <li>
               {product.rating} of {product.numReviews} reviews
             </li>
             <li className="mt-4">
-              <em>Description:</em> {product.description}
+              <em className="font-semibold">Description:</em>{' '}
+              {product.description}
             </li>
           </ul>
         </div>

@@ -7,15 +7,15 @@ export default function ProductItem({ product, addToCartHandler }) {
     <div className="card">
       <Link
         href={`/product/${product.slug}`}
-        className="flex flex-col items-center justify-center p-4 md:p-0"
+        className="flex flex-col items-center justify-center p-4 pb-0 md:p-0"
       >
         <img
           src={product.image}
           alt={product.name}
-          className="rounded shadow h-72 md:w-full md:h-80"
+          className="rounded shadow h-72 md:w-full md:h-72 xl:h-96"
         />
       </Link>
-      <div className="flex flex-col items-center justify-center p-5">
+      <div className="flex flex-col items-center justify-center p-3 pb-4">
         <Link href={`/product/${product.slug}`}>
           <h2 className="text-lg font-semibold">{product.name}</h2>
         </Link>

@@ -50,7 +50,7 @@ export default function LoginScreen() {
   return (
     <Layout title="Create Account">
       <form
-        className="mx-auto max-w-screen-md"
+        className="mx-auto max-w-screen-md px-4"
         onSubmit={handleSubmit(submitHandler)}
       >
         <h1 className="mb-4 text-xl">Create Account</h1>

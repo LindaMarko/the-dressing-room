@@ -66,13 +66,13 @@ export default function PlaceOrderScreen() {
   return (
     <Layout title="Place Order">
       <CheckoutWizard activeStep={3} />
-      <h1 className="mb-4 text-xl">Place Order</h1>
+      <h1 className="mb-4 text-xl px-4">Place Order</h1>
       {cartItems.length === 0 ? (
-        <div>
+        <div className="px-4">
           Cart is empty. <Link href="/">Go shopping</Link>
         </div>
       ) : (
-        <div className="grid md:grid-cols-4 md:gap-5">
+        <div className="grid md:grid-cols-4 md:gap-5 px-4">
           <div className="overflow-x-auto md:col-span-3">
             <div className="card  p-5">
               <h2 className="mb-2 text-lg">Shipping Address</h2>

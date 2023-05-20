@@ -46,7 +46,7 @@ export default function Layout({ title, children }) {
             <form className="mx-auto hidden justify-center md:flex">
               <input
                 type="text"
-                className="rounded-tr-none rounded-br-none p-1 text-sm   focus:ring-0"
+                className="rounded-tr-none rounded-br-none p-1 text-sm focus:ring-0"
                 placeholder="Search products"
               />
               <button
@@ -57,7 +57,7 @@ export default function Layout({ title, children }) {
                 <SearchIcon className="h-5 w-5"></SearchIcon>
               </button>
             </form>
-            <div>
+            <div className="text-sm md:text-lg">
               <Link href="/cart" className="p-4 text-sm md:text-lg">
                 Cart
                 {cartItemsCount > 0 && (
@@ -107,7 +107,7 @@ export default function Layout({ title, children }) {
             </div>
           </nav>
         </header>
-        <main className="container max-w-7xl m-auto mt-12 mb-18 px-8">
+        <main className="container max-w-7xl m-auto mt-6 md:mt-12 mb-18">
           {children}
         </main>
         <footer className="flex h-10 justify-center items-center shadow-inner mt-40 text-xs">
