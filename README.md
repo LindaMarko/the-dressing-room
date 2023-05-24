@@ -1,6 +1,6 @@
 In this project, I aimed to demonstrate my understanding of web development principles, and my ability to apply this knowledge to a real-world problem.
 
-I built a full-stack ecommerce website using **Next.js** as the framework, implementing **NextAuth.js** for authentication, **Tailwind CSS** for the user interface, **MongoDB** as the database, **React Hook Form** for handling input validation, **Axios** for making API requests, and deployed the website using **Vercel**. [Check out here.](https://thesis-project-lindamarko.vercel.app/)
+I built a full-stack ecommerce website using **Next.js** as the framework, implementing **NextAuth.js** for authentication, **Tailwind CSS** for the user interface, **MongoDB** as the database, **React Hook Form** for handling input validation, **Axios** for making API requests, and deployed the website using **Vercel**. [Check out here.](https://the-dressing-room.vercel.app/)
 
 The project was successfully developed with a modern and minimalist design. The website features essential functionalities such as a user-friendly home page with a product list, detailed product information pages, a convenient shopping cart, a seamless checkout process, user registration and login capabilities, user profile page, and a logout option. 
 
